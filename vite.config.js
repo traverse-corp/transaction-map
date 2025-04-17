@@ -22,12 +22,10 @@ export default defineConfig({
   server: {
     port: 3000,
     proxy: {
-      // '/ts/dash' 로 시작하는 요청은 158.180.92.62:61001 으로 프록시
       '/ts/dash': {
         target: 'http://localhost:61001',
         changeOrigin: true
       },
-      // '/ts/v2/graph' 로 시작하는 요청은 158.180.92.62:51001 으로 프록시
       '/ts/v2/graph': {
         target: 'http://localhost:51001',
         changeOrigin: true
