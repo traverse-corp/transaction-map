@@ -71,7 +71,7 @@ X-Tracer is a React-based application designed for visualizing and analyzing cry
 * Ensure your project has the required dependencies to support React and any additional libraries used by the component.
 
 ### Copy the Component:
-* Copy the TransactionMap.jsx file (and any related hooks or style files, if applicable) into your existing React project.
+* Copy the TransactionMapPage component (and any related hooks or style files, if applicable) into your existing React project.
 
 ### Import the Component:
 * In the React file where you want to use the transaction map, import the component as follows:
