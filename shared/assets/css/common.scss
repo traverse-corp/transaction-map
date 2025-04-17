@@ -1,0 +1,60 @@
+$primary-color: #1640db;
+$scondary-color: #55b6ed;
+$primary-font-color: #34353a;
+$black: #000;
+$white: #fff;
+$gray: #eaeaea;
+$basic-font-size: 16px;
+$primary-font-size: 15px;
+$box-border-radius: 8px;
+$box-shadow: 0px 0px 10px 2px rgba(170, 187, 250, 0.25);
+
+@mixin container() {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 48px;
+  margin: 80px 0 105px;
+  h1 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+@mixin flex-center-between() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin box-shape() {
+  box-shadow: 0px 0px 10px 2px rgba(170, 187, 250, 0.25);
+  border-radius: 8px;
+}
+@mixin nav-box-shape() {
+  box-shadow: 0px 0px 10px 2px rgba(84, 115, 232, 0.25);
+  border-radius: 8px;
+}
+
+@mixin font-style($size, $weight, $spacing) {
+  font-size: $size;
+  font-style: normal;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+}
+@mixin input($paddingTopBottom, $paddingLeftRight) {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e3e7f0;
+  background: #fff;
+  padding: $paddingTopBottom $paddingLeftRight;
+  outline: none;
+  &:active,
+  &:focus {
+    border: 1px solid #355adf;
+    box-shadow: 0px 0px 10px 2px rgba(103, 134, 247, 0.25);
+  }
+}
+@mixin errorMessage() {
+  color: #f6424d;
+  @include font-style(15px, 400, -0.7px);
+}
